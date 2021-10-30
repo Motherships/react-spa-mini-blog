@@ -1,46 +1,60 @@
 {
-	"env": {
-		"browser": true,
-		"es2021": true
-	},
-	"extends": [
-		"plugin:react/recommended",
-		"airbnb",
-		"prettier"
-	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
-		},
-		"ecmaVersion": 12,
-		"sourceType": "module"
+		}
 	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"env": {
+		"browser": true,
+		"amd": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended" // Make sure this is always the last element in the array.
+	],
 	"plugins": [
-		"react",
-		"@typescript-eslint"
+		"simple-import-sort",
+		"prettier"
 	],
 	"rules": {
-		"react/react-in-jsx-scope": "off",
-		"react/jsx-filename-extension": [
-			1,
+		"prettier/prettier": [
+			"error",
+			{},
 			{
-				"extensions": [
-					".js",
-					".jsx",
-					".ts",
-					".tsx"
-				]
+				"usePrettierrc": true
 			}
 		],
-		"import/extensions": [
+		"react/react-in-jsx-scope": "off",
+		"jsx-a11y/accessible-emoji": "off",
+		"react/prop-types": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
+		"jsx-a11y/anchor-is-valid": [
 			"error",
-			"always",
 			{
-				"js": "never",
-				"jsx": "never",
-				"ts": "never",
-				"tsx": "never"
+				"components": [
+					"Link"
+				],
+				"specialLink": [
+					"hrefLeft",
+					"hrefRight"
+				],
+				"aspects": [
+					"invalidHref",
+					"preferButton"
+				]
 			}
 		]
 	}
