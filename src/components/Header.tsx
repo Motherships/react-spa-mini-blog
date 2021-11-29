@@ -5,7 +5,7 @@ import { Navbar } from '@/components/Navbar'
 export const Header: React.FC = () => {
   return (
     <header>
-      <Navbar></Navbar>
+      <Navbar />
     </header>
   )
 }
