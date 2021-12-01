@@ -15,7 +15,6 @@ const ListItem = styled.li`
 
 type PostListProps = {
   posts: Post[]
-  handleRemove: (e: React.SyntheticEvent, id: string) => void
 }
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (

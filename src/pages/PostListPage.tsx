@@ -12,14 +12,10 @@ export const PostListPage: React.FC = () => {
     setPosts(savedPosts)
   }, [])
 
-  const removePost = (e: React.SyntheticEvent, id: string) => {
-    console.log('removePost', e, id)
-    setPosts((posts) => posts.filter((post) => post.id !== id))
-  }
   return (
     <OrdinaryPage>
       <h1>Blog</h1>
-      <PostList posts={posts} handleRemove={removePost} />
+      <PostList posts={posts} />
     </OrdinaryPage>
   )
 }
