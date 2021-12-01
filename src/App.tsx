@@ -1,20 +1,13 @@
 import 'bulma'
 
 import React from 'react'
+import { useRoutes } from 'react-router-dom'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { HomePage } from '@/pages/HomePage'
-import { PostFormPage } from '@/pages/PostFormPage'
+import { routes } from '@/routes/'
 const App: React.FC = () => {
-  return (
-    <>
-      <Header />
-      <HomePage />
-      <PostFormPage />
-      <Footer />
-    </>
-  )
+  const element = useRoutes(routes)
+
+  return <>{element}</>
 }
 
 export default App

@@ -50,7 +50,7 @@ export const PostForm: React.FC<PostFormProps> = ({ handleSubmit }) => {
               className="textarea"
               name="content"
               placeholder={'e.g. "Some content about our godlike cats"'}
-              rows={10}
+              rows={4}
               value={content}
               onChange={(e) => {
                 setContent(e.target.value)

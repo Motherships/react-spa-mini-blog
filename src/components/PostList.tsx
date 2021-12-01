@@ -1,28 +1,32 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import { SinglePost } from '@/components/SinglePost'
+import { PostCard } from '@/components/PostCard'
 import { Post } from '@/types'
+
+const OrderedList = styled.ol`
+  && {
+    margin-left: 0;
+  }
+`
+const ListItem = styled.li`
+  list-style: none;
+`
 
 type PostListProps = {
   posts: Post[]
   handleRemove: (e: React.SyntheticEvent, id: string) => void
 }
-export const PostList: React.FC<PostListProps> = ({ posts, handleRemove }) => {
+export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
-    <ol>
+    <OrderedList>
       {posts.map(({ id, title, content }) => {
         return (
-          <li key={id}>
-            <SinglePost id={id} title={title} content={content} />
-            <button
-              className="button is-danger"
-              onClick={(e) => handleRemove(e, id)}
-            >
-              Delete
-            </button>
-          </li>
+          <ListItem key={id}>
+            <PostCard id={id} title={title} content={content} />
+          </ListItem>
         )
       })}
-    </ol>
+    </OrderedList>
   )
 }
