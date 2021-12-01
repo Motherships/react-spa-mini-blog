@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -5,8 +6,9 @@ import { Paths } from '@/routes'
 import { Post } from '@/types'
 
 export const PostCard: React.FC<Post> = ({ id, title }) => {
+  const sectionClass = classNames({ post: true, [`post-${id}`]: true })
   return (
-    <section className={['article', id].join('')}>
+    <section className={sectionClass}>
       <div className="card">
         <div className="card-content">
           <div className="media">

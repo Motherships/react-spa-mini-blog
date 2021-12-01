@@ -1,8 +1,23 @@
-import React from 'react'
+import classNames from 'classnames'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Paths } from '@/routes'
 export const Navbar: React.FC = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+  const toggleNavbar = () => {
+    setNavbarOpen(!navbarOpen)
+  }
+
+  const burgerClass = classNames({
+    'navbar-burger': true,
+    'is-active': navbarOpen,
+  })
+
+  const menuClass = classNames({
+    'navbar-menu': true,
+    'is-active': navbarOpen,
+  })
   return (
     <>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -16,20 +31,22 @@ export const Navbar: React.FC = () => {
             />
           </a>
 
-          <a
-            role="button"
-            className="navbar-burger"
+          <button
+            className={burgerClass}
             aria-label="menu"
             aria-expanded="false"
-            data-target="navbarBasicExample"
+            data-target="navbar"
+            onClick={() => {
+              toggleNavbar()
+            }}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </button>
         </div>
 
-        <div id="navbarBasicExample" className="navbar-menu">
+        <div id="navbar" className={menuClass}>
           <div className="navbar-start">
             <Link className="navbar-item" to={Paths.Index}>
               Home

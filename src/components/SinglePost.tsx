@@ -1,10 +1,13 @@
+import classNames from 'classnames'
 import React from 'react'
 
 import { Post } from '@/types'
 
 export const SinglePost: React.FC<Post> = ({ id, title, content }) => {
+  const sectionClass = classNames({ post: true, [`post-${id}`]: true })
+
   return (
-    <section className={['article', id].join('')}>
+    <section className={sectionClass}>
       <div className="card">
         <div className="card-content">
           <div className="media">
