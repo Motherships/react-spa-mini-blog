@@ -1,36 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { OrdinaryPage } from '@/components/OrdinaryPage'
-import { SinglePost } from '@/components/SinglePost'
+import { PostSingle } from '@/components/posts/PostSingle'
+import { useAppDispatch, useAppSelector } from '@/hooks'
 import { Paths } from '@/routes'
-import { Post } from '@/types'
-
+import { postRemoved } from '@/store/posts/reducer'
 export const PostPage: React.FC = () => {
-  const [post, setPost] = useState<Post | null>(null)
   const { id } = useParams<'id'>()
   const navigate = useNavigate()
+  const dispatch = useAppDispatch()
+
+  const post = useAppSelector((state) =>
+    state.posts.find((post) => post.id == id)
+  )
 
   useEffect(() => {
-    const post = (
-      JSON.parse(localStorage.getItem('posts') || '[]') as Post[]
-    ).find((post) => post.id == id) as Post
-    setPost(post)
-  }, [id])
+    if (!post) {
+      navigate(Paths.NotFound)
+    }
+  }, [post])
 
   const removePost = (id: string) => {
-    const posts = (
-      JSON.parse(localStorage.getItem('posts') || '[]') as Post[]
-    ).filter((post) => post.id != id)
-    localStorage.setItem('posts', JSON.stringify(posts))
-    console.log('removePost', id)
+    dispatch(postRemoved(id))
     navigate(Paths.PostListPage)
   }
   return (
     <OrdinaryPage>
       {post && (
         <>
-          <SinglePost id={post.id} title={post.title} content={post.content} />
+          <PostSingle id={post.id} title={post.title} content={post.content} />
           <button
             className="button is-danger"
             onClick={() => {
