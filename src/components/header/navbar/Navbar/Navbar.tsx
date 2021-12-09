@@ -86,10 +86,7 @@ export const Navbar: React.FC = () => {
             <Logo />
           </StyledNavbarLink>
 
-          <BurgerButton
-            className={navbarOpen ? 'is-active' : ''}
-            onClickHandler={toggleNavbar}
-          />
+          <BurgerButton isActive={navbarOpen} onClickHandler={toggleNavbar} />
         </NavbarBrand>
 
         <NavbarMenu

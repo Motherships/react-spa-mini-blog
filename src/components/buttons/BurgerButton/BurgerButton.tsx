@@ -69,13 +69,19 @@ const NavbarBurger = styled.button`
 
 type BurgerButtonProps = {
   className?: string
+  isActive?: boolean
   onClickHandler: () => void
 }
 export const BurgerButton: React.FC<BurgerButtonProps> = ({
-  className,
+  className = '',
+  isActive = false,
   onClickHandler,
 }) => {
-  const classes = classNames('navbar-burger', className)
+  const classes = classNames(
+    'navbar-burger',
+    isActive ? 'is-active' : '',
+    className
+  )
 
   return (
     <NavbarBurger
