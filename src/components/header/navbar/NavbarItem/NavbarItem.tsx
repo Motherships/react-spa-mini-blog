@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { OLink } from '@/components/links/OLink/OLink'
-import { fonts } from '@/styled-vars'
+import { fonts, media } from '@/styled-vars'
 type NavbarItemProps = {
   className?: string
   to: string
@@ -24,15 +24,14 @@ const StyledLink = styled(OLink)`
   text-transform: uppercase;
   text-decoration: none;
 
-  padding: 0 16px;
   color: #000000;
 
   &:before {
     content: '';
 
     position: absolute;
-    /* padding of navbar + 5px */
-    bottom: -45px;
+    bottom: 0;
+
     left: 0;
     width: 0;
     height: 1px;
@@ -41,6 +40,13 @@ const StyledLink = styled(OLink)`
   }
   &.is-active:before {
     width: 100%;
+  }
+
+  ${media.lg} {
+    &:before {
+      /* padding of navbar -1px */
+      bottom: -39px;
+    }
   }
 `
 

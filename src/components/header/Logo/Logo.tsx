@@ -1,8 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { media } from '@/styled-vars'
+
 const StyledSVG = styled.svg`
   display: flex;
+  max-width: 80%;
+
+  ${media.lg} {
+    max-width: unset;
+  }
 `
 export const Logo: React.FC = () => {
   return (

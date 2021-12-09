@@ -1,11 +1,18 @@
 import React from 'react'
 
-import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
+import { Section } from '@/components/layout/Section/Section'
+import { MainSubtitle } from '@/components/typography/headings/MainSubtitle/MainSubtitle'
+import { MainTitle } from '@/components/typography/headings/MainTitle/MainTitle'
 
 export const HomePage: React.FC = () => {
   return (
-    <OrdinaryPage sidebar={'test'}>
-      <h1>HomePage</h1>
-    </OrdinaryPage>
+    <Section>
+      <MainTitle>
+        A few words about this blog platform, Ghost, and how this site was made
+      </MainTitle>
+      <MainSubtitle>
+        Why Ghost (& Figma) instead of Medium, WordPress or other options?
+      </MainSubtitle>
+    </Section>
   )
 }

@@ -12,20 +12,31 @@ import { media } from '@/styled-vars'
 const StyledNavbar = styled.nav`
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0 30px 0;
+  padding: 18px 0 15px 0;
+
+  ${media.lg} {
+    padding: 50px 0 30px 0;
+  }
 `
 
 const NavbarBrand = styled.div`
   display: flex;
+  flex: 1;
 `
-
+const StyledNavbarLink = styled(OLink)`
+  display: flex;
+  align-items: center;
+`
 const NavbarMenu = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   background-color: white;
   box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   padding: 0.5rem 0;
-
   display: none;
   &.is-active {
     display: block;
@@ -34,6 +45,27 @@ const NavbarMenu = styled.div`
     display: flex;
     align-items: stretch;
     box-shadow: none;
+    width: auto;
+  }
+`
+
+const NavbarStart = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
+
+  ${media.lg} {
+    flex-direction: row;
+  }
+`
+const NavbarEnd = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
+  ${media.lg} {
+    flex-direction: row;
   }
 `
 export const Navbar: React.FC = () => {
@@ -50,9 +82,9 @@ export const Navbar: React.FC = () => {
         aria-label="main navigation"
       >
         <NavbarBrand className="navbar-brand">
-          <OLink className="navbar-item" to={Paths.Index}>
+          <StyledNavbarLink className="navbar-item" to={Paths.Index}>
             <Logo />
-          </OLink>
+          </StyledNavbarLink>
 
           <BurgerButton
             className={navbarOpen ? 'is-active' : ''}
@@ -67,15 +99,15 @@ export const Navbar: React.FC = () => {
             'is-active': navbarOpen,
           })}
         >
-          <div className="navbar-start">
+          <NavbarStart className="navbar-start">
             <NavbarItem to={Paths.Index}>Home</NavbarItem>
             <NavbarItem to={Paths.PostListPage}>Blog</NavbarItem>
             <NavbarItem to={Paths.PostFormPage}>Post form</NavbarItem>
-          </div>
+          </NavbarStart>
 
-          <div className="navbar-end">
+          <NavbarEnd className="navbar-end">
             <div className="navbar-item"></div>
-          </div>
+          </NavbarEnd>
         </NavbarMenu>
       </StyledNavbar>
     </>

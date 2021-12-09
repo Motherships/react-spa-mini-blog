@@ -6,6 +6,7 @@ import { SectionStyles } from '@/components/layout/Section/Section'
 
 const StyledHeader = styled.header`
   ${SectionStyles}
+  margin-bottom: 52px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 `
 export const Header: React.FC = () => {
