@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 import { fonts } from '@/styled-vars'
 
-const StyledParagraph = styled.p`
-  margin: 16px 0;
+const StyledHeading2 = styled.h2`
+  margin-top: 24px;
+  margin-bottom: 24px;
   font-family: ${fonts.newYork.medium};
   font-style: normal;
   font-weight: normal;
@@ -14,6 +15,6 @@ const StyledParagraph = styled.p`
 
   color: #000000;
 `
-export const Paragraph: React.FC = ({ children }) => {
-  return <StyledParagraph>{children}</StyledParagraph>
+export const Heading2: React.FC = ({ children }) => {
+  return <StyledHeading2>{children}</StyledHeading2>
 }

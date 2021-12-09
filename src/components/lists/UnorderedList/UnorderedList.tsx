@@ -3,17 +3,18 @@ import styled from 'styled-components'
 
 import { fonts } from '@/styled-vars'
 
-const StyledParagraph = styled.p`
-  margin: 16px 0;
+const StyledUnorderedList = styled.ul`
+  padding: 0 16px;
+
   font-family: ${fonts.newYork.medium};
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 170%;
-  /* or 34px */
+  /* identical to box height, or 34px */
 
   color: #000000;
 `
-export const Paragraph: React.FC = ({ children }) => {
-  return <StyledParagraph>{children}</StyledParagraph>
+export const UnorderedList: React.FC = ({ children }) => {
+  return <StyledUnorderedList>{children}</StyledUnorderedList>
 }
