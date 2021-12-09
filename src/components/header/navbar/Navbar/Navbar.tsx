@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { BurgerButton } from '@/components/buttons/BurgerButton/BurgerButton'
-import { Logo } from '@/components/header/Logo/Logo'
 import { NavbarItem } from '@/components/header/navbar/NavbarItem/NavbarItem'
 import { OLink } from '@/components/links/OLink/OLink'
+import { Logo } from '@/components/Logo/Logo'
 import { Paths } from '@/routes'
 import { media } from '@/styled-vars'
 
