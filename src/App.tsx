@@ -1,9 +1,10 @@
-import 'bulma'
+// import 'bulma'
+import 'normalize.css'
 
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 
-import { routes } from '@/routes/'
+import { routes } from '@/routes'
 const App: React.FC = () => {
   const element = useRoutes(routes)
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import { OrdinaryPage } from '@/components/OrdinaryPage'
+import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
 import { PostSingle } from '@/components/posts/PostSingle'
 import { useAppDispatch, useAppSelector } from '@/hooks'
 import { Paths } from '@/routes'

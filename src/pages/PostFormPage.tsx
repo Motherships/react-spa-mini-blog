@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { OrdinaryPage } from '@/components/OrdinaryPage'
+import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
 import { PostForm } from '@/components/posts/PostForm'
 import { useAppDispatch } from '@/hooks'
 import { Paths } from '@/routes'

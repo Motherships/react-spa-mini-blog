@@ -1,13 +1,13 @@
 import type { RouteObject } from 'react-router-dom'
 
-import { Layout } from '@/components/Layout'
+import { Layout } from '@/components/layout/Layout/Layout'
 import { HomePage } from '@/pages/HomePage'
 import { NotFound } from '@/pages/NotFound'
 import { PostFormPage } from '@/pages/PostFormPage'
 import { PostListPage } from '@/pages/PostListPage'
 import { PostPage } from '@/pages/PostPage'
 
-export enum Paths {
+export const enum Paths {
   Index = '/',
   PostListPage = '/posts/',
   PostPage = '/posts/:id',

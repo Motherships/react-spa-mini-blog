@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
+import { OLink } from '@/components/links/OLink/OLink'
 import { Paths } from '@/routes'
 import { Post } from '@/types'
 
@@ -14,7 +14,7 @@ export const PostCard: React.FC<Post> = ({ id, title }) => {
           <div className="media">
             <div className="media-content">
               <p className="title is-4">
-                <Link to={Paths.PostListPage + id}>{title}</Link>
+                <OLink to={Paths.PostListPage + id}>{title}</OLink>
               </p>
             </div>
             <div className="media-right"></div>

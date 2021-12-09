@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-import { OrdinaryPage } from '@/components/OrdinaryPage'
+import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
+import { OLink } from '@/components/links/OLink/OLink'
 import { Paths } from '@/routes'
 export const NotFound: React.FC = () => {
   return (
     <OrdinaryPage>
       <h1>404 not found</h1>
-      <Link className="navbar-item" to={Paths.Index}>
+      <OLink className="navbar-item" to={Paths.Index}>
         Home
-      </Link>
+      </OLink>
     </OrdinaryPage>
   )
 }

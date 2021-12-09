@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { OrdinaryPage } from '@/components/OrdinaryPage'
+import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
 import { PostList } from '@/components/posts/PostList'
 import { useAppSelector } from '@/hooks'
 export const PostListPage: React.FC = () => {
