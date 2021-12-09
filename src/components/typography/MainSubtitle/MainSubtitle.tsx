@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { fonts } from '@/styled-vars'
+import { fonts, media } from '@/styled-vars'
 
 const StyledMainSubtitle = styled.h2`
   max-width: 626px;
@@ -18,6 +18,10 @@ const StyledMainSubtitle = styled.h2`
   text-align: center;
 
   color: #000000;
+
+  ${media.lg} {
+    font-size: 16px;
+  }
 `
 export const MainSubtitle: React.FC = ({ children }) => {
   return <StyledMainSubtitle>{children}</StyledMainSubtitle>
