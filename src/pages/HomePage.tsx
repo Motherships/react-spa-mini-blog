@@ -10,16 +10,18 @@ import { Heading2 } from '@/components/typography/Heading2/Heading2'
 import { MainSubtitle } from '@/components/typography/MainSubtitle/MainSubtitle'
 import { MainTitle } from '@/components/typography/MainTitle/MainTitle'
 import { Paragraph } from '@/components/typography/Paragraph/Paragraph'
+import picUrl from '@/public/images/pic.png'
+import thumbnailUrl from '@/public/images/thumbnail.png'
 
 const thumbData = {
-  src: '/src/public/images/thumbnail.png',
+  src: thumbnailUrl,
   width: 1440,
   height: 900,
   alt: 'Alt for default thumbnail',
 }
 
 const picData = {
-  src: '/src/public/images/pic.png',
+  src: picUrl,
   width: 854,
   height: 570,
   alt: 'Alt for default pic',
