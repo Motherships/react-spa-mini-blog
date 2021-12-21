@@ -1,8 +1,6 @@
 import React from 'react'
 
 import { PictureWithDescription } from '@/components/images/PictureWithDescription/PictureWithDescription'
-import { PostThumbnail } from '@/components/images/PostThumbnail/PostThumbnail'
-import { PostTextSection } from '@/components/layout/PostTextSection/PostTextSection'
 import { Section } from '@/components/layout/Section/Section'
 import { UnorderedList } from '@/components/lists/UnorderedList/UnorderedList'
 import { UnorderedListItem } from '@/components/lists/UnorderedList/UnorderedListItem'
@@ -10,8 +8,26 @@ import { Heading2 } from '@/components/typography/Heading2/Heading2'
 import { MainSubtitle } from '@/components/typography/MainSubtitle/MainSubtitle'
 import { MainTitle } from '@/components/typography/MainTitle/MainTitle'
 import { Paragraph } from '@/components/typography/Paragraph/Paragraph'
+import { PostAuthorCard } from '@/pages/posts/components/PostAuthorCard/PostAuthorCard'
+import { PostTextSection } from '@/pages/posts/components/PostTextSection/PostTextSection'
+import { PostThumbnail } from '@/pages/posts/components/PostThumbnail/PostThumbnail'
 import picUrl from '@/public/images/pic.png'
+import profilePicUrl from '@/public/images/profilepic.png'
 import thumbnailUrl from '@/public/images/thumbnail.png'
+
+const authorPicData = {
+  src: profilePicUrl,
+  width: 56,
+  height: 56,
+  alt: 'Alt for default profile pic',
+}
+
+const authorCard = {
+  picture: authorPicData,
+  name: 'Mika MAtikainen',
+  dateCreated: new Date(2020, 4, 15).toString(),
+  timeToRead: '4 min',
+}
 
 const thumbData = {
   src: thumbnailUrl,
@@ -28,7 +44,8 @@ const picData = {
   description:
     'Image caption centered this way and I’ll make this a bit longer to indicate the amount of line-height.',
 }
-export const HomePage: React.FC = () => {
+
+export const PostPredefinedPage: React.FC = () => {
   return (
     <>
       <Section>
@@ -42,8 +59,8 @@ export const HomePage: React.FC = () => {
       </Section>
       <PostThumbnail {...thumbData} />
 
+      <PostAuthorCard {...authorCard} />
       <PostTextSection>
-        <Heading2>Next on the pipeline</Heading2>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit
           tempus erat egestas efficitur. In hac habitasse platea dictumst. Fusce
@@ -55,9 +72,9 @@ export const HomePage: React.FC = () => {
         </Paragraph>
       </PostTextSection>
 
-      <PictureWithDescription {...picData} />
-
       <PostTextSection>
+        <Heading2>Next on the pipeline</Heading2>
+
         <Paragraph>
           Duis eu velit tempus erat egestas efficitur. In hac habitasse platea
           dictumst. Fusce a nunc eget ligula suscipit finibus. Aenean pharetra
@@ -68,6 +85,8 @@ export const HomePage: React.FC = () => {
           posuere maximus dui et fringilla.
         </Paragraph>
       </PostTextSection>
+
+      <PictureWithDescription {...picData} />
 
       <PostTextSection>
         <Paragraph>

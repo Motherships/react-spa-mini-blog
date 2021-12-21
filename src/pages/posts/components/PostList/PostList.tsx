@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { PostCard } from '@/components/posts/PostCard'
+import { PostCard } from '@/pages/posts/components/PostCard/PostCard'
 import { Post } from '@/types'
 
 const OrderedList = styled.ol`

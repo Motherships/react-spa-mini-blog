@@ -3,11 +3,12 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
-import { PostForm } from '@/components/posts/PostForm'
 import { useAppDispatch } from '@/hooks'
+import { PostForm } from '@/pages/posts/components/PostForm/PostForm'
 import { Paths } from '@/routes'
 import { postAdded } from '@/store/posts/reducer'
 import { Post } from '@/types'
+
 export const PostFormPage: React.FC = () => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()

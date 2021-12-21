@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
-import { PostSingle } from '@/components/posts/PostSingle'
 import { useAppDispatch, useAppSelector } from '@/hooks'
+import { PostSingle } from '@/pages/posts/components/PostSingle/PostSingle'
 import { Paths } from '@/routes'
 import { postRemoved } from '@/store/posts/reducer'
 export const PostPage: React.FC = () => {

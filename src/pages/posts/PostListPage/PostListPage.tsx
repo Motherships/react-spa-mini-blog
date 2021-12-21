@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { OrdinaryPage } from '@/components/layout/OrdinaryPage/OrdinaryPage'
-import { PostList } from '@/components/posts/PostList'
 import { useAppSelector } from '@/hooks'
+import { PostList } from '@/pages/posts/components/PostList/PostList'
 export const PostListPage: React.FC = () => {
   const posts = useAppSelector((state) => state.posts)
 
