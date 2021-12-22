@@ -65,7 +65,9 @@ export const PostPredefinedPage: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit
           tempus erat egestas efficitur. In hac habitasse platea dictumst. Fusce
           a nunc eget ligula suscipit finibus. Aenean pharetra quis lacus at
-          viverra. <br /> <br />
+          viverra.
+        </Paragraph>
+        <Paragraph>
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos. Aliquam quis posuere ligula. In eu dui
           molestie, molestie lectus eu, semper lectus.
@@ -79,8 +81,9 @@ export const PostPredefinedPage: React.FC = () => {
           Duis eu velit tempus erat egestas efficitur. In hac habitasse platea
           dictumst. Fusce a nunc eget ligula suscipit finibus. Aenean pharetra
           quis lacus at viverra. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. <br />
-          <br />
+          per conubia nostra, per inceptos himenaeos.
+        </Paragraph>
+        <Paragraph>
           Morbi efficitur auctor metus, id mollis lorem pellentesque id. Nullam
           posuere maximus dui et fringilla.
         </Paragraph>
@@ -92,8 +95,9 @@ export const PostPredefinedPage: React.FC = () => {
         <Paragraph>
           Aenean pharetra quis lacus at viverra. Class aptent taciti sociosqu ad
           litora torquent per conubia nostra, per inceptos himenaeos. Aliquam
-          quis posuere ligula. <br />
-          <br />
+          quis posuere ligula.
+        </Paragraph>
+        <Paragraph>
           In eu dui molestie, molestie lectus eu, semper lectus. Proin at justo
           lacinia, auctor nisl et, consequat ante. Donec sit amet nisi arcu.
           Morbi efficitur auctor metus, id mollis lorem pellentesque id. Nullam
