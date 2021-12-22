@@ -54,9 +54,7 @@ const PostComponents: AvailibleComponentsMap = {
 const jsonToComponent = (block: DynamicBlock): React.ReactElement => {
   // component does exist
   if (typeof PostComponents[block.type] !== 'undefined') {
-    console.log('exists')
-
-    let children: string | React.ReactElement | React.ReactNode = ''
+    let children: React.ReactElement | React.ReactNode = ''
     if (block.children) {
       if (typeof block.children == 'string') {
         children = block.children
