@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { Section } from '@/components/layout/Section/Section'
 import { OLink } from '@/components/links/OLink/OLink'
 import { Logo } from '@/components/Logo/Logo'
-import { fonts } from '@/styled-vars'
+import { fonts } from '@/styled/vars'
 
 const StyledFooter = styled.footer`
   background: black;

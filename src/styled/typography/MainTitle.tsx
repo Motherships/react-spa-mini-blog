@@ -1,8 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 
-import { fonts, media } from '@/styled-vars'
-const StyledMainTitle = styled.h1`
+import { fonts, media } from '@/styled/vars'
+export const MainTitle = styled.h1`
   max-width: 858px;
   margin: 0 auto;
   padding-bottom: 32px;
@@ -21,6 +20,3 @@ const StyledMainTitle = styled.h1`
     font-size: 54px;
   }
 `
-export const MainTitle: React.FC = ({ children }) => {
-  return <StyledMainTitle>{children}</StyledMainTitle>
-}

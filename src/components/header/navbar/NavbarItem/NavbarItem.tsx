@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { OLink } from '@/components/links/OLink/OLink'
-import { fonts, media } from '@/styled-vars'
+import { fonts, media } from '@/styled/vars'
 type NavbarItemProps = {
   className?: string
   to: string

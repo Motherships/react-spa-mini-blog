@@ -1,9 +1,8 @@
-import React from 'react'
 import styled from 'styled-components'
 
-import { fonts, media } from '@/styled-vars'
+import { fonts, media } from '@/styled/vars'
 
-const StyledMainSubtitle = styled.h2`
+export const MainSubtitle = styled.h2`
   max-width: 626px;
   margin: 0 auto;
   padding-bottom: 52px;
@@ -23,6 +22,3 @@ const StyledMainSubtitle = styled.h2`
     font-size: 16px;
   }
 `
-export const MainSubtitle: React.FC = ({ children }) => {
-  return <StyledMainSubtitle>{children}</StyledMainSubtitle>
-}

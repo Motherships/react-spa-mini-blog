@@ -165,7 +165,7 @@ const post = {
         {
           id: '24',
           type: 'Paragraph',
-          children: 'Thanks for reading,\n\nMika',
+          children: 'Thanks for reading,\nMika',
         },
       ],
     },

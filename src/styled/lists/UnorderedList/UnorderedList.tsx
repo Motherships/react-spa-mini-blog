@@ -1,9 +1,8 @@
-import React from 'react'
 import styled from 'styled-components'
 
-import { fonts } from '@/styled-vars'
+import { fonts } from '@/styled/vars'
 
-const StyledUnorderedList = styled.ul`
+export const UnorderedList = styled.ul`
   padding: 0 16px;
 
   font-family: ${fonts.newYork.medium};
@@ -15,6 +14,3 @@ const StyledUnorderedList = styled.ul`
 
   color: #000000;
 `
-export const UnorderedList: React.FC = ({ children }) => {
-  return <StyledUnorderedList>{children}</StyledUnorderedList>
-}

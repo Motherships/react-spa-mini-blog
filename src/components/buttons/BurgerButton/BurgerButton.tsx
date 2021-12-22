@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import styled from 'styled-components'
 
-import { media } from '@/styled-vars'
+import { media } from '@/styled/vars'
 
 const NavbarBurger = styled.button`
   appearance: none;

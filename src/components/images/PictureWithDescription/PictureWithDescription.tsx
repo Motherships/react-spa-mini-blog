@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import type { PictureProps } from '@/components/images/Picture/Picture'
 import { Picture } from '@/components/images/Picture/Picture'
-import { fonts } from '@/styled-vars'
+import { fonts } from '@/styled/vars'
 
 type PictureWithDescription = {
   description?: string

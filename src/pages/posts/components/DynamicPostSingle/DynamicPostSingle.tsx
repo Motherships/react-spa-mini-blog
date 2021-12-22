@@ -3,15 +3,17 @@ import React from 'react'
 
 import { PictureWithDescription } from '@/components/images/PictureWithDescription/PictureWithDescription'
 import { Section } from '@/components/layout/Section/Section'
-import { UnorderedList } from '@/components/lists/UnorderedList/UnorderedList'
-import { UnorderedListItem } from '@/components/lists/UnorderedList/UnorderedListItem'
-import { Heading2 } from '@/components/typography/Heading2/Heading2'
-import { MainSubtitle } from '@/components/typography/MainSubtitle/MainSubtitle'
-import { MainTitle } from '@/components/typography/MainTitle/MainTitle'
-import { Paragraph } from '@/components/typography/Paragraph/Paragraph'
 import { PostAuthorCard } from '@/pages/posts/components/PostAuthorCard/PostAuthorCard'
 import { PostTextSection } from '@/pages/posts/components/PostTextSection/PostTextSection'
 import { PostThumbnail } from '@/pages/posts/components/PostThumbnail/PostThumbnail'
+import { OrderedList } from '@/styled/lists/OrderedList/OrderedList'
+import { OrderedListItem } from '@/styled/lists/OrderedList/OrderedListItem'
+import { UnorderedList } from '@/styled/lists/UnorderedList/UnorderedList'
+import { UnorderedListItem } from '@/styled/lists/UnorderedList/UnorderedListItem'
+import { Heading2 } from '@/styled/typography/Heading2'
+import { MainSubtitle } from '@/styled/typography/MainSubtitle'
+import { MainTitle } from '@/styled/typography/MainTitle'
+import { Paragraph } from '@/styled/typography/Paragraph'
 type DynamicBlock = {
   id: string
   type: string
@@ -42,6 +44,8 @@ const PostComponents: AvailibleComponentsMap = {
   Section: Section,
   UnorderedList: UnorderedList,
   UnorderedListItem: UnorderedListItem,
+  OrderedList: OrderedList,
+  OrderedListItem: OrderedListItem,
   Heading2: Heading2,
   MainSubtitle: MainSubtitle,
   MainTitle: MainTitle,

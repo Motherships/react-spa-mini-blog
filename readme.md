@@ -15,6 +15,7 @@
 - (+) Make basic folder structure
 - (+) Use localStorage to store data
 - (+) Migrate store to redux toolkit and write middlewares to save store to localStorage (and rehydrate on full page reload)
+- (+) Dynamic content works!
 - (-) Make it look pretty (i'm thinking about getting rid of bulma and make layout from some opensource figma template, i like this one https://www.figma.com/community/file/825069539366152961)
 - (-) Make use of react thunk (i'm thinking about using https://jsonplaceholder.typicode.com/)
 - (-) Make a prod build

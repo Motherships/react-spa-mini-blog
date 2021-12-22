@@ -1,9 +1,8 @@
-import React from 'react'
 import styled from 'styled-components'
 
-import { fonts } from '@/styled-vars'
+import { fonts } from '@/styled/vars'
 
-const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
   margin: 16px 0;
   font-family: ${fonts.newYork.medium};
   font-style: normal;
@@ -14,6 +13,3 @@ const StyledParagraph = styled.p`
 
   color: #000000;
 `
-export const Paragraph: React.FC = ({ children }) => {
-  return <StyledParagraph>{children}</StyledParagraph>
-}

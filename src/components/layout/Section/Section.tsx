@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-import { device, media, size } from '@/styled-vars'
+import { device, media, size } from '@/styled/vars'
 
 const gap = 15
 const gapInPX = `${gap}px`

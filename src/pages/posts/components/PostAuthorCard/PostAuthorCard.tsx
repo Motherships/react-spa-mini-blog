@@ -5,7 +5,7 @@ import type { PictureProps } from '@/components/images/Picture/Picture'
 import { Picture } from '@/components/images/Picture/Picture'
 import { SocialButtonLink } from '@/components/links/SocialButtonLink/SocialButtonLink'
 import { PostSectionStyles } from '@/pages/posts/components/PostTextSection/PostTextSection'
-import { fonts } from '@/styled-vars'
+import { fonts } from '@/styled/vars'
 
 const StyledPostAuthorCard = styled.section`
   ${PostSectionStyles}

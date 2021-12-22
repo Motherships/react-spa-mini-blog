@@ -7,7 +7,7 @@ import { NavbarItem } from '@/components/header/navbar/NavbarItem/NavbarItem'
 import { OLink } from '@/components/links/OLink/OLink'
 import { Logo } from '@/components/Logo/Logo'
 import { Paths } from '@/routes'
-import { media } from '@/styled-vars'
+import { media } from '@/styled/vars'
 
 const StyledNavbar = styled.nav`
   position: relative;

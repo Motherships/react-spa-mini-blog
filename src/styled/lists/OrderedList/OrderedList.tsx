@@ -1,9 +1,8 @@
-import React from 'react'
 import styled from 'styled-components'
 
-import { fonts } from '@/styled-vars'
+import { fonts } from '@/styled/vars'
 
-const StyledOrderedList = styled.ol`
+export const OrderedList = styled.ol`
   padding: 0 16px;
 
   font-family: ${fonts.newYork.medium};
@@ -15,6 +14,3 @@ const StyledOrderedList = styled.ol`
 
   color: #000000;
 `
-export const OrderedList: React.FC = ({ children }) => {
-  return <StyledOrderedList>{children}</StyledOrderedList>
-}

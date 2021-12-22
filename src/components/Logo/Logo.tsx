@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { media } from '@/styled-vars'
+import { media } from '@/styled/vars'
 
 type LogoProps = {
   theme?: 'light' | 'dark'
